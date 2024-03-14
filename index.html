@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="NCS.png" type="image/x-icon">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      background: #e3edf7;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      border: 2px solid red;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+      background-image: url(NCS.png);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .drop {
+      margin: 50px auto;
+      max-width: 600px;
+    }
+
+    .drop li {
+      list-style: none;
+      width: 100%;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #e3edf7;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+    }
+
+    .drop li label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    label::before {
+      content: "+";
+      margin-right: 10px;
+      font-size: 24px;
+      font-weight: bolder;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .drop .content {
+      text-align: justify;
+      color: #555;
+      padding: 0 10px;
+      line-height: 26px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s, padding 0.5s;
+    }
+
+    .drop input[type="radio"]:checked+label+.content {
+      max-height: 400px;
+      padding: 10px 10px 20px;
+      overflow: auto;
+    }
+
+    .drop input[type="radio"]:checked+label::before {
+      content: "-";
+    }
+
+    @media (max-width: 360px) {
+      .drop {
+        margin: 50px auto;
+        max-width: 360px;
+      }
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- icon right  -->
+  <a href="https://www.youtube.com/@NaseebCodeStudio" target="_blank">
+    <div class="icon"></div>
+  </a>
+  <!-- ==================first drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="first" />
+      <label for="first">var, let, const</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+
+          In JavaScript, <b>var, const, and let</b> are all used for declaring variables, but they have some differences
+          in
+          terms of scope, hoisting, and mutability. <br>
+          <hr>
+          - With the <b>var keyword,</b> variable names are redeclarable and reassignable. <br>
+          - With the <b>let keyword,</b> variable names are reassignable; we can change the value in the future in an
+          application
+          of a let variable. <br>
+          - With the <b>const keyword,</b> variable names are fixed and can't be redeclared or reassigned. When we want
+          to make a
+          variable fixed and never change, we use the const keyword. <br>
+          <hr>
+          <b style="color: red;">var</b> is function-scoped, meaning it is limited in scope to the function in which it
+          is declared or the global scope if declared outside of any function. <br>
+          - Variables declared with var <b>can be re-declared and updated</b> within their scope. <br>
+          - Variables declared with <b>var are hoisted</b> to the top of their scope. <br>
+          <hr>
+          <b style="color: red;">let</b> is block-scoped, meaning it is limited in scope to the block ({}) in which it
+          is declared. <br>
+          - Variables declared with let can be <b>updated but not re-declared</b> within their scope. <br>
+          - Variables declared with let are hoisted to the top of their block but <b>not initialized</b> until their
+          declaration is evaluated. <br>
+          <hr>
+          <b style="color: red;">const</b> is also block-scoped like let. <br>
+          - Variables declared with const <b>cannot be re-assigned</b> once initialized. However, for objects and
+          arrays, their properties or elements can be modified. <br>
+          - Variables declared with const are also hoisted but <b>not initialized</b> until their declaration is
+          evaluated. <br>
+          <hr>
+          <span style="color: blue; text-align: center; display: block;">Using const is preferable when you don't intend
+            to reassign a variable. It helps in writing more predictable and maintainable code. let is useful when you
+            need to reassign variables. var is still used in older codebases, but let and const are preferred in modern
+            JavaScript development due to their more predictable scoping behavior.</span>
+          <!-- --p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ==================second drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="second" />
+      <label for="second" style="text-transform: capitalize">Data Types</label>
+      <div class="content">
+        <p>
+          <!-- -- p --  -->
+
+          - In JavaScript, <b>data types define</b> the type of data that can be stored and manipulated within a
+          program. <br>
+          - JavaScript is a loosely typed language, meaning variables can hold values of any data type without
+          explicitly
+          defining the type. <br>
+          <hr>
+          - Use the <b>typeof</b> keyword to find a type of data or data stored in a variable. <br>
+          - console.log(typeof(varName)); OR in console: typeof varName <br>
+          - have a result of your data in a <b>table:</b> console.table([varName1, varName2, varName3 and so on])
+          <hr>
+          <!-- -- p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="third" />
+      <label for="third">Primitive / Values data type</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          In JavaScript, primitive data types are basic data types that are not objects and have immutable values. There
+          are six primitive data types: <br>
+          <hr>
+          - <b>Number:</b> Represents numeric values. It can be integer or floating-point. <br>
+          <span style="color: red;">
+            let num = 10; <br>
+            let floatNum = 3.14; <br>
+          </span>
+
+          - <b>String:</b> Represents textual data enclosed within single quotes ('') or double quotes (""). <br>
+          <span style="color: red;">
+            let str = 'Hello'; <br>
+            let anotherStr = "NaseebCodeStudio"; <br>
+          </span>
+          - <b>Boolean:</b> Represents a logical value indicating true or false. <br>
+          <span style="color: red;">
+            let isTrue = true; <br>
+            let isFalse = false; <br>
+          </span>
+          - <b>Undefined:</b> Represents a variable that has been declared but not assigned a value or a function that
+          doesn't return a value. it is a data and also a value. <br>
+          <span style="color: red;">
+            let n; <br>
+            let box = undefined; <br>
+            console.log(n); // Output: undefined <br>
+          </span>
+
+          - <b>Null:</b> Represents the intentional absence of any value. <br>
+          <span style="color: red;">
+            let y = null;<br>
+            let selecetedProduct = null;<br>
+          </span>
+
+          - <b>Symbol:</b> Represents a unique identifier, used primarily as object property keys. <br>
+          <span style="color: red;">
+            const sym = Symbol('description');
+          </span>
+
+          <br />
+          <hr>
+          <span style="color: blue; display: block;text-align: center;">These primitive data types are used to represent
+            simple values directly in memory, and they are immutable, meaning their values cannot be changed.</span>
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="six" />
+      <label for="six">Dynamic typing</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <b>Types of Programming Languages:</b> <br />
+          - there are two types of programming languages: <br>
+          <hr>
+          <b>1. Static programming languages</b> <br>
+          - In <b>static programming languages,</b> the data type of a variable is known at compile time. Once a
+          variable is declared, its data type cannot be changed. This means that variables must be explicitly declared
+          with their data types before they are used. <br>
+          - Imagine you're preparing to bake cookies. In a <b>static language</b>, it's like having labeled jars for
+          each
+          ingredient before you start baking. You know exactly what goes into each jar—flour, sugar, etc. Once you've
+          labeled them, you can't change what's in the jars. Similarly, <b>in static languages,</b> when you declare a
+          variable, <b>you have to specify its type</b> (like saying this jar is for flour), and once declared, you
+          can't
+          change its type later. <br>
+          <span style="color: red; font-weight: bold;">Example:</span> In languages like C, Java, or Swift, when you
+          declare a variable,
+          you explicitly state its data type: <br>
+          <span style="color: red;">
+            int num = 10; // 'num' is declared as an integer <br>
+            String message = "Hello"; // 'message' is declared as a string <br>
+          </span>
+          <hr>
+          <b>2. Dynamic programming languages</b> <br>
+          - In <b>dynamic programming languages,</b> the data type of a variable is determined at runtime. <b>You don't need to
+            specify</b> the data type when declaring a variable. Variables can <b>hold different types</b> of data
+          throughout the
+          program's execution.
+          <br>
+          - Going back to the baking analogy, in dynamic languages, it's like having a single jar that can hold
+          different ingredients at different times. You can start with flour, then put sugar in it later if you need to.
+          Similarly, in dynamic languages, you can <b>use a variable without specifying</b> its type upfront, and you
+          can
+          change what's stored in it during the program's execution. <br>
+          <span style="color: red; font-weight: bold;">Example:</span> In languages like JavaScript or Python, you don't
+          need to specify
+          the data type when declaring a variable: <br>
+          <span style="color: red;">
+            let num = 10; // 'num' can hold a number <br>
+            let message = "Hello"; // 'message' can hold a string <br>
+            num = "World"; // Now 'num' holds a string <br>
+          </span>
+          <hr>
+          <span style="color: blue; text-align: center; display: block;">
+            In summary, the key difference is that in static languages, you need to specify the data type of variables
+            upfront and can't change it later, while in dynamic languages, the data type is determined at runtime, and
+            variables can hold different types of data over time.
+          </span>
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+
+  <br><br><br><br>
+</body>
+
+</html>
